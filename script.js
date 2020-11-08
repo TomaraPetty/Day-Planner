@@ -65,11 +65,11 @@ for (let i = 0; i < schedule[i].hour; i++) {
 
        // if else statements to determin the background color of the table cell
 if (h === schedule[i].hour) {
-    $(schedule[i].e).css("background-color", "red");
+    $(schedule[i].e).css("background-color", "turquoise");
 } else if (h > schedule[i].hour) {
     $(schedule[i].e).css("background-color", "lightGrey"); 
 } else if (h < schedule[i].hour) {
-    $(schedule[i].e).css("background-color", "purple");
+    $(schedule[i].e).css("background-color", "lightGreen");
 } else {
     $(schedule[i].e).css("background-color", "yellow"); 
 }
