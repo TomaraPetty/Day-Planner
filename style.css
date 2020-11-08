@@ -70,3 +70,14 @@ body {
     transition: all .3s ease-in-out;
   }
   
+  #r9am {
+    background-color: lightblue;
+  }
+
+  .save {
+    background-color: #06AED5;
+  }
+
+  .event {
+    background-color: lightgreen;
+  }
