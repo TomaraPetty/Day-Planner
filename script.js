@@ -21,27 +21,56 @@ var t = moment();
 // set variable for current hour
 var h = t.hour();
 
-// array of hours in schedule
-var schedule = ["#event9", "#event10", "#event11", "#event12", "#event1", "#event2", "#event3", "#event4", "#event5"]
-var scheduleHour = [9, 10, 11, 12, 1, 2, 3, 4, 5]
+// set schedule objects with hour of time block and corrisponding id. 
+var schedule = [
+    {
+        hour: 9,
+        e: '#event9'
+    },
+    {
+        hour: 10,
+        e: '#event10'   
+    }, 
+    {
+        hour: 11,
+        e: '#event11'
+    }, 
+    {
+        hour: 12,
+        e: '#event12'
+    }, 
+    {
+        hour: 13,
+        e: '#event1'
+    },
+    {
+        hour: 14,
+        e: '#event2'
+    },
+    {
+        hour: 15,
+        e: '#event3'
+    },
+    {
+        hour: 16,
+        e: '#event4'
+    },
+    {
+        hour: 17,
+        e: '#event5'
+    }
+]
 
-// for (let i = 0; i < schedule[i]; i++) {
-// }
+for (let i = 0; i < schedule[i].hour; i++) {
 
-    // if else statements to determin the background color of the table cell
-if (h === 9) {
-    $("event9").css("background-color", "red");
-} else if (h > 9) {
-    $('#event9').css("background-color", "lightGrey"); 
-} else if (h < 9) {
-    $('#event9').css("background-color", "lightGreen");
+       // if else statements to determin the background color of the table cell
+if (h === schedule[i].hour) {
+    $(schedule[i].e).css("background-color", "red");
+} else if (h > schedule[i].hour) {
+    $(schedule[i].e).css("background-color", "lightGrey"); 
+} else if (h < schedule[i].hour) {
+    $(schedule[i].e).css("background-color", "purple");
 } else {
-    $('#event9').css("background-color", "yellow"); 
+    $(schedule[i].e).css("background-color", "yellow"); 
 }
-
-
-
-
-
-    
-
+}
